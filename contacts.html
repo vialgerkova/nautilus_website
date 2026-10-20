@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Наутилус Помпилиус</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">
+    <img src="img/logo.png" alt="Логотип Наутилус Помпилиус" width="35">
+  </a>
+
+  <a href="index.html" >Главная</a>
+  <a href="history.html">История</a>
+  <a href="members.html">Состав</a>
+  <a href="discography.html">Дискография</a>
+  <a href="discography.html#albums">Альбомы</a>
+  <a href="gallery.html">Галерея</a>
+  <a href="contacts.html" class="active">Контакты</a>
+  <a href="dom_js.html">DOM</a>
+  <a href="translit.html">Транслит</a>
+  <a href="task.html">Задача</a>
+
+  <a href="https://butusov.ru" target="_blank" rel="noopener">
+    Сайт
+  </a>
+
+  <a href="https://butusov.ru" target="_blank" rel="noopener">
+  <img src="img/img.butusov.png"
+       alt="Сайт Вячеслава Бутусова"
+       height="20">
+</a>
+</nav>
+
+  <main>
+    <h1 id="begin">Контакты и обратная связь</h1>
+
+    <p>
+      Эта страница предназначена для обратной связи с автором
+      информационного сайта о группе «Наутилус Помпилиус»,
+      а также для демонстрации учебной формы заказа мерча от музыкальной группы.
+    </p>
+
+    <h2>Содержание</h2>
+    <ul>
+      <li><a href="#contact-form">Связаться с автором</a></li>
+      <li><a href="#order-form">Заказ мерча</a></li>
+    </ul>
+
+    <h2 id="contact-form">Связаться с автором сайта</h2>
+
+    <p>
+      Заполни контактные данные и укажи дату отправки сообщения.
+    </p>
+
+   
+<form action="https://formsubmit.co/v.gerkova@yandex.ru"
+      method="POST">
+
+  <input type="hidden" name="_subject"
+         value="Обращение с сайта Наутилус Помпилиус">
+
+  <input type="hidden" name="_captcha" value="true">
+
+  <p>
+    <label for="surname">Фамилия:</label>
+    <input type="text" id="surname" name="surname"
+           autocomplete="family-name" required>
+  </p>
+
+  <p>
+    <label for="firstname">Имя:</label>
+    <input type="text" id="firstname" name="firstname"
+           autocomplete="given-name" required>
+  </p>
+
+  <p>
+    <label for="group_name">Учебная группа:</label>
+    <input type="text" id="group_name" name="group_name"
+           placeholder="Например, БФЛ 251">
+  </p>
+
+  <p>
+    <label for="phone">Мобильный телефон:</label>
+    <input type="tel" id="phone" name="phone"
+           autocomplete="tel"
+           placeholder="+7 900 000-00-00">
+  </p>
+
+  <p>
+    <label for="email">Электронная почта:</label>
+    <input type="email" id="email" name="email"
+           autocomplete="email" required>
+  </p>
+
+  <p>
+    <label for="send_date">Дата отправки сообщения:</label>
+    <input type="date" id="send_date" name="send_date" required>
+  </p>
+
+  <p>
+    <button type="submit">Отправить сообщение</button>
+    <button type="reset">Очистить форму</button>
+  </p>
+</form>
+
+
+    <p><a href="#begin">К началу страницы ↑</a></p>
+
+    <h2 id="order-form">Заказ мерча группы</h2>
+
+    <p>
+      Учебная форма заказа товаров, посвящённых группе:
+      виниловых пластинок, футболок и постеров.
+    </p>
+
+    
+<form action="https://formsubmit.co/v.gerkova@yandex.ru"
+      method="POST">
+
+  <input type="hidden" name="_subject"
+         value="Заказ мерча Наутилус Помпилиус">
+
+  <input type="hidden" name="form_type"
+         value="Заказ мерча">
+
+  <p>
+    <label for="customer_name">Ваше имя:</label>
+    <input type="text" id="customer_name"
+           name="customer_name" value="Иван" required>
+  </p>
+
+  <p>
+    <label for="quantity">Количество товаров:</label>
+    <input type="number" id="quantity" name="quantity"
+           value="1" min="1" max="10" required>
+  </p>
+
+  <fieldset>
+    <legend>Выберите товар</legend>
+
+    <p>
+      <label>
+        <input type="radio" name="product"
+               value="vinyl" checked>
+        Виниловая пластинка
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input type="radio" name="product"
+               value="tshirt">
+        Футболка
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input type="radio" name="product"
+               value="poster">
+        Постер
+      </label>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Дополнительные услуги</legend>
+
+    <p>
+      <label>
+        <input type="checkbox" name="gift_wrap"
+               value="yes" checked>
+        Подарочная упаковка
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input type="checkbox" name="autograph"
+               value="yes">
+        Открытка с автографом
+      </label>
+    </p>
+  </fieldset>
+
+  <p>
+    <label for="delivery_date">Желаемая дата доставки:</label>
+    <input type="date" id="delivery_date"
+           name="delivery_date" value="2026-12-01" required>
+  </p>
+
+  <p>
+    <label for="order_password">
+      Условный пароль для демонстрации:
+    </label>
+    <input type="password" id="order_password"
+           name="order_password"
+           autocomplete="new-password"
+           placeholder="Введите вымышленный пароль">
+  </p>
+
+  <p>
+    <label for="comment">Комментарий к заказу:</label>
+    <textarea id="comment" name="comment"
+              rows="4"
+              placeholder="Пожелания к заказу"></textarea>
+  </p>
+
+  <p>
+    <button type="submit">Отправить заказ</button>
+    <button type="reset">Очистить форму</button>
+  </p>
+</form>
+
+    <p><a href="#begin">К началу страницы ↑</a></p>
+  </main>
+
+  <footer>
+    <p>Информационный сайт о группе «Наутилус Помпилиус».</p>
+    <a href="index.html">Вернуться на главную</a>
+  </footer>
+
+</body>
+</html>

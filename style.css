@@ -1,0 +1,59 @@
+nav {
+  background: #1f2a44;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  margin-right: 4px;
+}
+nav a:hover {
+  background: #3b4a70;
+}
+nav a.active {
+  background: #14beb0;
+  color: black;
+  font-weight: bold;
+}
+.passport {
+  width: 900px;
+  margin: 20px;
+  padding: 10px 20px;
+  border: 2px solid #1f2a44;
+  background: #f4efe0;
+}
+.passport-table td {
+  vertical-align: top;
+  padding-top: 0;
+}
+.passport-table td p:first-child {
+  margin-top: 0 !important;
+}
+.passport-table td img {
+  display: block;
+}
+.passport-card {
+  position: relative;
+  width: 700px;
+  margin: 20px;
+}
+.passport-bg {
+  width: 70%;
+  display: block;
+}
+.passport-text {
+  position: absolute;
+  left: 30%;
+  top: 57%;
+  width: 60%;
+  color: black;
+  font-size: 16px;
+}
+.passport-text p {
+  margin: 4px 0;
+}

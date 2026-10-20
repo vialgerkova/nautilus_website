@@ -1,0 +1,165 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изменяем кириллицу на латиницу по клику</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">
+    <img src="img/logo.png" alt="Логотип Наутилус Помпилиус" width="35">
+  </a>
+
+  <a href="index.html">Главная</a>
+  <a href="history.html">История</a>
+  <a href="members.html">Состав</a>
+  <a href="discography.html">Дискография</a>
+  <a href="discography.html#albums">Альбомы</a>
+  <a href="gallery.html">Галерея</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="dom_js.html">DOM</a>
+  <a href="translit.html" class="active">Транслит</a>
+  <a href="task.html">Задача</a>
+
+  <a href="https://butusov.ru" target="_blank" rel="noopener">
+    Сайт
+  </a>
+
+  <a href="https://butusov.ru" target="_blank" rel="noopener">
+    <img src="img/img.butusov.png"
+         alt="Сайт Вячеслава Бутусова"
+         height="20">
+  </a>
+</nav>
+
+<main>
+
+  <h1>Изменяем кириллицу на латиницу по клику</h1>
+
+  <h2>Паспортные данные</h2>
+
+  <div class="passport-card">
+    <div class="passport-text">
+      <p><b>Фамилия: </b><span id="surname">Геркова</span></p>
+      <p><b>Имя: </b><span id="firstname">Виктория</span></p>
+      <p><b>Год рождения: </b><span id="birthyear">2004</span></p>
+    </div>
+  </div>
+
+  <button type="button" onclick="changePassport()">
+    Изменить кириллицу на латиницу
+  </button>
+
+  <h2>Переводчик текста</h2>
+
+  <p>Введи текст на русском языке:</p>
+  <textarea id="source" rows="4"></textarea>
+
+  <p>
+    <button type="button" onclick="translate()">
+      Перевести
+    </button>
+  </p>
+
+  <p>Результат:</p>
+  <textarea id="result" rows="4" readonly></textarea>
+
+  <script>
+    function translateText(text) {
+      var result = "";
+
+      for (var i = 0; i < text.length; i++) {
+        var letter = text[i];
+
+        if (letter == "А") result += "A";
+        else if (letter == "а") result += "a";
+        else if (letter == "Б") result += "B";
+        else if (letter == "б") result += "b";
+        else if (letter == "В") result += "V";
+        else if (letter == "в") result += "v";
+        else if (letter == "Г") result += "G";
+        else if (letter == "г") result += "g";
+        else if (letter == "Д") result += "D";
+        else if (letter == "д") result += "d";
+        else if (letter == "Е") result += "E";
+        else if (letter == "е") result += "e";
+        else if (letter == "Ё") result += "Yo";
+        else if (letter == "ё") result += "yo";
+        else if (letter == "Ж") result += "Zh";
+        else if (letter == "ж") result += "zh";
+        else if (letter == "З") result += "Z";
+        else if (letter == "з") result += "z";
+        else if (letter == "И") result += "I";
+        else if (letter == "и") result += "i";
+        else if (letter == "Й") result += "Y";
+        else if (letter == "й") result += "y";
+        else if (letter == "К") result += "K";
+        else if (letter == "к") result += "k";
+        else if (letter == "Л") result += "L";
+        else if (letter == "л") result += "l";
+        else if (letter == "М") result += "M";
+        else if (letter == "м") result += "m";
+        else if (letter == "Н") result += "N";
+        else if (letter == "н") result += "n";
+        else if (letter == "О") result += "O";
+        else if (letter == "о") result += "o";
+        else if (letter == "П") result += "P";
+        else if (letter == "п") result += "p";
+        else if (letter == "Р") result += "R";
+        else if (letter == "р") result += "r";
+        else if (letter == "С") result += "S";
+        else if (letter == "с") result += "s";
+        else if (letter == "Т") result += "T";
+        else if (letter == "т") result += "t";
+        else if (letter == "У") result += "U";
+        else if (letter == "у") result += "u";
+        else if (letter == "Ф") result += "F";
+        else if (letter == "ф") result += "f";
+        else if (letter == "Х") result += "Kh";
+        else if (letter == "х") result += "kh";
+        else if (letter == "Ц") result += "Ts";
+        else if (letter == "ц") result += "ts";
+        else if (letter == "Ч") result += "Ch";
+        else if (letter == "ч") result += "ch";
+        else if (letter == "Ш") result += "Sh";
+        else if (letter == "ш") result += "sh";
+        else if (letter == "Щ") result += "Shch";
+        else if (letter == "щ") result += "shch";
+        else if (letter == "Ъ" || letter == "ъ") result += "";
+        else if (letter == "Ы") result += "Y";
+        else if (letter == "ы") result += "y";
+        else if (letter == "Ь" || letter == "ь") result += "";
+        else if (letter == "Э") result += "E";
+        else if (letter == "э") result += "e";
+        else if (letter == "Ю") result += "Yu";
+        else if (letter == "ю") result += "yu";
+        else if (letter == "Я") result += "A";
+        else if (letter == "я") result += "a";
+        else result += letter;
+      }
+
+      return result;
+    }
+
+    function translate() {
+      var text = document.getElementById("source").value;
+      document.getElementById("result").value = translateText(text);
+    }
+
+    function changePassport() {
+      document.getElementById("surname").innerText =
+        translateText("Геркова");
+
+      document.getElementById("firstname").innerText =
+        translateText("Виктория");
+    }
+  </script>
+
+</main>
+
+</body>
+</html>
